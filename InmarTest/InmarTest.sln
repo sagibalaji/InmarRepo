@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31229.75
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogicalApps", "LogicalApps\LogicalApps.csproj", "{722C16F9-E4FC-4B25-9A63-21AC336B551E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InmarWeb", "InmarWeb\InmarWeb.csproj", "{CE01DFB1-FE03-4E1D-B8B8-A800B07C54BC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{722C16F9-E4FC-4B25-9A63-21AC336B551E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{722C16F9-E4FC-4B25-9A63-21AC336B551E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{722C16F9-E4FC-4B25-9A63-21AC336B551E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{722C16F9-E4FC-4B25-9A63-21AC336B551E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CE01DFB1-FE03-4E1D-B8B8-A800B07C54BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CE01DFB1-FE03-4E1D-B8B8-A800B07C54BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CE01DFB1-FE03-4E1D-B8B8-A800B07C54BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CE01DFB1-FE03-4E1D-B8B8-A800B07C54BC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F87CE3EC-AB6C-4E44-A6A3-A1072FA31AEA}
+	EndGlobalSection
+EndGlobal

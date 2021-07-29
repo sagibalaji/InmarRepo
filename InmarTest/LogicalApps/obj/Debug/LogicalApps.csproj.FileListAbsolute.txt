@@ -1,0 +1,7 @@
+C:\Murthy\Encana\TestProjects\InmarProjs\InmarTest\LogicalApps\bin\Debug\LogicalApps.exe.config
+C:\Murthy\Encana\TestProjects\InmarProjs\InmarTest\LogicalApps\bin\Debug\LogicalApps.exe
+C:\Murthy\Encana\TestProjects\InmarProjs\InmarTest\LogicalApps\bin\Debug\LogicalApps.pdb
+C:\Murthy\Encana\TestProjects\InmarProjs\InmarTest\LogicalApps\obj\Debug\LogicalApps.csprojAssemblyReference.cache
+C:\Murthy\Encana\TestProjects\InmarProjs\InmarTest\LogicalApps\obj\Debug\LogicalApps.csproj.CoreCompileInputs.cache
+C:\Murthy\Encana\TestProjects\InmarProjs\InmarTest\LogicalApps\obj\Debug\LogicalApps.exe
+C:\Murthy\Encana\TestProjects\InmarProjs\InmarTest\LogicalApps\obj\Debug\LogicalApps.pdb
