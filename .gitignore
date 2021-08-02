@@ -1,0 +1,8 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/InmarTest/packages/SimpleInjector.5.3.2
+/InmarTest/InmarWebApiTest/obj
+/InmarTest/InmarWebApiTest/bin/Debug/net5.0
+/InmarTest/InmarWebApiTest/services/SimpleInjectorDependencyResolver.cs
