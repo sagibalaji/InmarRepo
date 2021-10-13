@@ -1,0 +1,46 @@
+#EL-Article2{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    padding:50px;
+    background:white;
+    width:1000px;
+    margin:auto;
+}
+#EL-Article2 div{
+    margin-bottom:20px;
+    width:100%;
+}
+#EL-Article2 .title{
+    font-size:28pt;
+    font-weight:bold;
+    font-style: italic;
+    padding-bottom:20px;
+    border-bottom: 1pt solid black;
+}
+#EL-Article2 .snippet{
+    font-size:16pt;
+    text-align:justify;
+}
+#EL-Article2 .info{
+    font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+    width:100%;
+    margin-bottom:60px;
+}
+#EL-Article2 .date{
+    float:right;
+}
+#EL-Article2 .source{
+    float:left;
+    font-weight:bold;
+}
+#EL-Article2 .body{
+    font-size:14pt;
+    text-align: justify;
+}
+#EL-Article2 .summary{
+    font-size:12pt;
+    text-align: justify;
+}
+#EL-Article2 .copyright{
+    font-style: italic;
+    margin-top:40px;
+}

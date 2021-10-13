@@ -1,0 +1,47 @@
+.status-label {
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 9px;
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 1em;
+  }
+  
+  .status-label--out {
+    background-color: gray;
+    color: white;
+  }
+  
+  .status-label--in {
+    background-color: green;
+    color: white;
+  }
+  
+  .vertical-center {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+  }
+  
+  .user-name {
+    font-size: 2em;
+  }
+  
+  .offline-message {
+    position: absolute;
+    bottom: 20px;
+    margin-top: 1.5em;
+    margin-right: 1em;
+    font-size: 1.5em;
+  }
+  
+  .route-spinner {
+    margin-top: -2.4em;
+    margin-left: 1em;
+  }
+  

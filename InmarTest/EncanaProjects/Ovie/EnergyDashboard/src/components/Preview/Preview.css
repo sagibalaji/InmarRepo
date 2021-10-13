@@ -1,0 +1,43 @@
+#EL-Article{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    word-break: break-word;
+}
+#EL-Article .title{
+    font-size:24px;
+    font-weight:bold;
+    padding-bottom:20px;
+    border-bottom: 1pt solid black;
+}
+#EL-Article .title a{
+    color: black;
+}
+#EL-Article .content{
+    padding:20px;
+}
+#EL-Article .highlight{
+    margin:20px 0px;
+}
+#EL-Article .info{
+    font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+    width:100%;
+    margin-bottom:60px;
+}
+#EL-Article .date{
+    float:right;
+}
+#EL-Article .source{
+    float:left;
+    font-weight:bold;
+}
+#EL-Article .body{
+    font-size:14pt;
+    text-align: justify;
+}
+#EL-Article .summary{
+    font-size:12pt;
+    text-align: justify;
+}
+#EL-Article .copyright{
+    font-style: italic;
+    margin-top:40px;
+}

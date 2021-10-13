@@ -1,0 +1,79 @@
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.css" />
+<link rel="stylesheet" href="https://unpkg.com/ngx-bootstrap/datepicker/bs-datepicker.css">
+
+
+
+<div class="container">
+  <br />
+
+
+  <div class="form-group" style="display:flex; flex-direction: row; justify-content: left; align-items: center">
+
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <strong> Date:</strong>&nbsp;&nbsp;
+     <input class="form-control"
+           name="dp" [(ngModel)]="bsValue"
+           (ngModelChange)="changeDate($event)"
+           value="{{ bsValue | date: 'EEE MMM dd, yyyy HH:mm' }}"
+           placeholder='EEE MMM dd, yyyy HH:mm'
+           bsDatepicker [bsConfig]="bsConfig">
+  </div>
+  <form novalidate
+        #form="ngForm">
+    <div class="form-group" style="display:flex; flex-direction: row; justify-content: left; align-items: center">
+      <strong>Supervisor:</strong>&nbsp;&nbsp;
+      <select class="form-control"
+              name="manager"
+              [(ngModel)]="manager">
+        <option></option>
+        <option *ngFor="let manager of managers"
+                [value]="manager">
+          {{ manager }}
+        </option>
+      </select>  &nbsp;&nbsp;&nbsp;&nbsp;
+
+      <strong>Area:</strong>&nbsp;&nbsp;
+      <select class="form-control"
+              name="area"
+              [(ngModel)]="area">
+        <option></option>
+        <option *ngFor="let area of areas"
+                [value]="area">
+          {{ area }}
+        </option>
+      </select>
+    </div>
+
+    <div>
+      <table class='table table-sm'>
+        <thead>
+          <tr>
+            <th sortable="email" (sort)="onSort($event)">Email</th>
+            <th sortable="manager" (sort)="onSort($event)">Supervisor</th>
+            <th sortable="area" (sort)="onSort($event)">Area</th>
+            <th sortable="route" (sort)="onSort($event)">Route</th>
+            <th sortable="status" (sort)="onSort($event)">In/Out</th>
+            <!-- <th sortable="createdAt" (sort)="onSort($event)"> Check In/Out Time</th> -->
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let dbData of dbSortedView | tableFilter: form.value" [ngClass]="dbData.isLate == 1 ? 'trIsLate': ''">
+            <td>{{ dbData.email }}</td>
+            <td>{{ dbData.manager }}</td>
+            <td>{{ dbData.area }}</td>
+            <td>{{ dbData.route }}</td>  
+            <td [ngClass]="dbData.status == 'IN' ? 'isIn': 'isOut'"> {{ dbData.status }} </td>
+            <td>{{ datepipe.transform(dbData.statusDate, 'dd MMM yyyy HH:mm:ss', isDSTObserved(dbData.statusDate))  }} CST</td>
+            <div *ngIf=isToday()>
+              <td *ngIf="dbData.status == 'IN' "><button class="btn btn-default" (click)="clickEvent(dbData.email ,dbData.manager,dbData.area,dbData.route,'OUT')">Check Out</button></td>
+              <td *ngIf="dbData.status == 'OUT' "><button class="btn btn-default" (click)="clickEvent(dbData.email ,dbData.manager,dbData.area,dbData.route,'IN')">Check In</button></td>
+            </div>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </form>
+
+</div>

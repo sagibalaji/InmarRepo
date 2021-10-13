@@ -1,0 +1,36 @@
+<header>
+  <nav class='navbar navbar-expand-sm navbar-toggleable-sm navbar-dark border-bottom box-shadow mb-3'>
+    <div class="container">
+      <a class="navbar-brand" [routerLink]="['/']">
+        <img src="assets/img/logo-company.png" alt="">
+      </a>
+      <a class="navbar-brand" [routerLink]='["/"]'>Check In</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-label="Toggle navigation"
+              [attr.aria-expanded]="isExpanded" (click)="toggle()">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse" [ngClass]='{"show": isExpanded}'>
+        <ul class="navbar-nav flex-grow">
+          <li class="nav-item" [routerLinkActive]='["link-active"]' [routerLinkActiveOptions]='{ exact: true }'>
+            <a class="nav-link text-light" [routerLink]='["/"]'>Home</a>
+          </li>
+          <a *ngIf="isSupervisorUser" class="nav-link text-light">||</a>
+          <li *ngIf="isSupervisorUser" class="nav-item" [routerLinkActive]="['link-active']">
+            <a class="nav-link text-light" [routerLink]="['/dash-board']">Dashboard</a>
+          </li>
+          <a  class="nav-link text-light">||</a>
+        </ul>
+      </div>
+      <div *ngIf="isLoggedIn" class="row w-10 mt-2 mb-2 ml-0 mr-0">
+        <div class="col-12">
+          <button type="button" class="btn btn-outline-primary float-right" (click)="onLogout()">Logout</button>
+        </div>
+      </div>
+      <div *ngIf="!isLoggedIn" class="row w-10 mt-2 mb-2 ml-0 mr-0">
+        <div class="col-auto"></div>
+        <button type="button" class="btn btn-outline-primary col-auto ml-auto mr-auto" (click)="onLogin()">Login</button>
+        <div class="col-auto"></div>
+      </div>
+    </div>
+  </nav>
+</header>

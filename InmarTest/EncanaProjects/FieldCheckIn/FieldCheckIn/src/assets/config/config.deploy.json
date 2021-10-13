@@ -1,0 +1,26 @@
+{
+    "env": {
+    "name": "Dev"
+    },
+    "appInsights": {
+        "instrumentationKey": "dev"
+    },
+    "logging": {
+        "console": true,
+        "appInsights": true
+    },
+    "aad": {
+        "requireAuth": true,
+        "tenant": "encana.onmicrosoft.com",
+        "clientId": "0d1772b4-a73f-404a-845b-4ba0e358ce33",
+        "endpoints": {
+                "https://graph.microsoft.com": "00000003-0000-0000-c000-000000000000",
+                "webApiUri": "/api/"
+            },
+        "cacheLocation": "localStorage"
+    },
+    "apiServer": {
+        "metadata": "https://localhost.demo.com/api/v1.0/",
+        "rule": "https://localhost.demo.com/api/v1.0/"
+    }
+}

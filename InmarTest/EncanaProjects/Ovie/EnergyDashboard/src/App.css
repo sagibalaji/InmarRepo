@@ -1,0 +1,355 @@
+/* #region ------ VARIABLES ------*/
+html {
+  --ovBlue: rgba(0, 117, 188, 1);
+  --ovGreen: rgba(35, 170, 128, 1);
+  --ovLightGray:rgba(160, 160, 160, 0.5);
+  --ovDarkGray: rgba(84, 88, 90, 1);
+  --ovOrange: rgba(246, 141, 46, 1);
+  --ovMaroon: rgba(189, 71, 42,1);
+  --ovYellow: rgba(227, 204, 31, 1);
+}
+/* #endregion ------------------*/
+
+
+/* #region ------ GLOBAL ------*/
+a{
+  color: var(--ovMaroon);
+  text-decoration: none;
+}
+a:hover{
+  color: var(--ovMaroon);
+  text-decoration: underline;
+}
+body{
+  overflow-x: hidden;
+  margin:0;
+}
+.highcharts-title tspan{
+  font-family: Poppins, Arial, sans-serif;
+  font-size:14px;
+  font-weight:bold;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+mark{
+  background: rgba(227, 204, 31, 0.3)
+}
+.react-tabs__tab-panel{
+  padding:0 20px;
+}
+.spin{
+  animation: spin-me infinite 1s linear;    
+}
+@keyframes spin-me {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--ovLightGray);
+  border-radius: 4px;
+}
+/* #endregion */
+
+/* #region ------ LAYOUT ------ */
+#EL-Body{
+  display:flex;
+  margin:0px 20px;
+}
+#EL-Left{
+  flex:1;
+  background-color:rgba(160, 160, 160, 0.2);
+  border-right: 1px solid rgba(100,100,100,0.2);
+  padding:10px;
+  min-height: 900px;
+}
+#EL-Middle-Left{
+    flex:2.5;
+    border-right:1px solid rgba(100, 100, 100, 0.2);
+    padding:20px 0 0 20px;
+    margin-top:10px;
+}
+#EL-Middle-Right{
+  flex:3;
+  border-right: 1px solid rgba(100,100,100,0.2);
+  margin-top:10px;
+  padding:20px;
+  max-width: 525px;
+}
+#EL-Right{
+    flex:4;
+    padding:10px;
+    margin-top:10px;
+}
+/* #endregion */
+
+/* #region ------ HEADER -------- */
+#EL-Header {
+  background-color: rgba(84, 88, 90, 1);
+  border-bottom: 1pt solid rgba(100,100,100,0.2);
+  margin:0px;
+  padding:15px 20px 9px 20px;
+}
+#EL-Header a:hover{
+  text-decoration: none;
+}
+#EL-Banner{
+  display:none;
+  background:rgb(255, 245, 167);
+  margin:-15px -20px 15px -20px;
+  padding:3px;
+  text-align: center;
+}
+#EL-Banner span{
+  font-size:15px;
+  letter-spacing: 2px;
+}
+#EL-Banner span a{
+  font-weight: bold;
+  padding-left:5px;
+  padding-right: 5px;
+}
+#EL-HeaderTop{
+  display:flex;
+}
+#EL-Ovie {
+    display:flex;
+    flex:0.8;
+    margin-left:20px;
+}
+#EL-Ovie .icon {
+  float:left;
+  height: 80px;
+  margin-top:5px;
+}
+#EL-Header .title {
+  position:relative;
+  top:28px;
+  text-transform: uppercase;
+  cursor: pointer;
+  color: rgba(255, 255, 255, 1.0);
+  letter-spacing: 15px;
+  font-size:25px;
+  margin-right:10px;
+}
+#EL-Header .tag {
+  position: relative;
+  top:24px;
+  padding-left:15px;
+  text-transform: uppercase;
+  cursor: pointer;
+  color: rgba(160, 160, 160, 1.0);
+  letter-spacing:3px;
+  font-size:12px;
+  border-left:2px solid rgba(160, 160, 160, 1);
+}
+#EL-SearchBox {
+  flex: 2;
+  margin:20px 20px 0px 40px;
+}
+#EL-SearchBox input {
+  height: 50px;
+  font-size: 18px;
+  background: rgba(160, 160, 160, 1);
+  border-radius: 4px;
+  border: 0;
+  color: rgba(255, 255, 255, 1.0);
+  font-weight: 100;
+  padding-left:55px;
+  padding-top:-5px;
+  border:1pt solid rgba(100,100,100,0.1);
+  letter-spacing: 1px;
+  font-weight:bold;
+}
+#EL-SearchBox input:focus {
+  background: rgba(255, 255, 255 ,1.0);
+  color: rgba(0, 0, 0, 1.0);
+}
+#EL-SearchBox .search-icon{
+  fill: rgba(100, 100, 100, 1.0);
+  height:20px;
+  position:relative;
+  top:2px;
+  border-right:1pt solid rgba(100,100,100,0.4);
+  padding-right:10px;
+}
+#EL-SearchBox .cancel-icon{
+  position: relative;
+  top:2px;
+  left:-5px;
+}
+#EL-SearchBox ul{
+  box-shadow: 0 5px 25px 0px rgba(100,100,100,0.8);
+  border-radius: 0px 0px 4px 4px;
+  margin-top:12px;
+}
+#EL-SearchBox .header{
+  font-weight:bold;
+  position:relative;
+  left:-10px;
+  margin-top:10px;
+}
+#EL-SearchBox .example{
+  display:flex;
+  margin-left:40px;
+  font-size:16px;
+}
+#EL-SearchBox .example span{
+  min-width:150px;
+}
+#EL-SearchBox .example .query{
+  margin-right:4px;
+  padding:5px;
+  min-width:0;
+}
+#EL-SearchBox .example .grn{
+  background:rgba(35, 170, 128, 0.4);
+}
+#EL-SearchBox .example .red{
+  background:rgba(189, 71, 42,0.4);
+}
+#EL-SearchBox .footer{
+  margin-bottom:10px;
+}
+#EL-Range{
+  flex:1;
+  margin:20px 20px 0 0;
+}
+#EL-Range div {
+  border:0;
+  font-size:18px;
+}
+#EL-Range input{
+  background: rgba(160, 160, 160, 1.0);
+  border-radius: 4px;
+  color:rgba(255, 255, 255 , 1.0);
+  height:50px;
+  font-size:16px;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+}
+#EL-Range ::placeholder{
+  color:rgba(255, 255, 255, 0.8);
+}
+#EL-Range .cancel-icon{
+  position: relative;
+  left:-30px;
+}
+#EL-Logo{
+  flex:0.2;
+  text-align:center;
+  padding:5px;
+}
+#EL-Logo .icon{
+  height:50px;
+}
+#EL-Tour{
+  border: none;
+}
+#EL-Logo button{
+  border-radius: 4px;
+  background: rgba(246, 141, 46, 1);
+  color: white;
+  margin-top:8px;
+}
+
+/* #region ------ REFINERS ------ */
+#EL-Refiners{
+  margin-top:-15px;
+  padding:10px 10px;
+  min-width:230px;
+}
+#EL-Refiners h2{
+  color:black;
+  text-transform: uppercase;
+  font-size:14px;
+  letter-spacing: 1.5px;
+  margin:15px 0px 10px 0px;
+}
+#EL-Refiners ul{ 
+  padding:0px 5px;
+  max-height: 815px;
+  direction: rtl;
+}
+#EL-Refiners ul::-webkit-scrollbar{
+  width:3px;
+}
+#EL-Refiners li{
+  font-size:14px;
+  font-weight:500;
+  direction: ltr;
+  text-transform: uppercase;
+  margin-top:-6px;
+}
+#EL-Refiners input{
+  font-size:14px;
+}
+/* #endregion */
+
+/* #region ------ ARTICLES ------ */
+#EL-Article-Header{
+  display:flex;
+}
+#EL-Article-Header .filters{
+  flex:1;
+}
+#EL-Article-Header .download{
+  flex:1;
+  margin-top:5px;
+  margin-left:80px;
+}
+#EL-Article-Header .download svg{
+  font-size:22px;
+  margin-right:5px;
+}
+#EL-Articles{
+  padding:20px 0px;
+}
+#EL-Articles .hits{
+  min-height:2000px;
+}
+#EL-Articles .hit{
+  padding:10px 20px;
+  border-bottom:0.5px solid #E2E2E2;
+  cursor: pointer;
+}
+#EL-Articles .hit .title{
+  color: var(--ovMaroon);
+  font-size:16px;
+  font-weight: bold;
+  text-transform:capitalize;
+}
+#EL-Articles .hit .title:hover{
+  text-decoration: underline;
+}
+#EL-Articles .hit .extract{
+  font-size:13px;
+  height:40px;
+  overflow:hidden;
+}
+#EL-Articles .hit .details{
+  display:flex;
+  margin-top:10px;
+}
+#EL-Articles .hit .source{
+  font-size:13px;
+  flex:1;
+  font-weight:bold;
+}
+#EL-Articles .hit .date{
+  float:right;
+  font-size:13px;
+  text-transform: uppercase;
+}
+#EL-Articles .active{
+  background: rgba(100,100,100,0.1);
+}
+#EL-Articles .stats{
+  font-size:14px;
+  font-weight:bold;
+  width:400px;
+}
+/* #endregion */
+

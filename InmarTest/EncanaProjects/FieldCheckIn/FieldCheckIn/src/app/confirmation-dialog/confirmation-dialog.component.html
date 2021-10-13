@@ -1,0 +1,56 @@
+<!--<div class="modal fade" id="modalPopup" tabindex="-1" role="dialog" aria-labelledby="modalPopupLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalPopupLabel">{{ title }}</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+           <div class="form-group">
+            <label for="recipient-name" class="form-control-label">Reason:</label>
+            <input type="text" class="form-control" name="comments" id="comments">
+          </div>
+        </form>
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" id="ModalDismiss" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" id="ModalChangeStatus" class="btn btn-default btn-primary">Change Status</button>
+        <button type="submit" id="SubmitStatusChange" class="btn btn-default" style="display: none"></button>
+      </div>
+
+    </div>
+  </div>
+</div>
+  -->
+
+
+
+<div class="modal-header">
+  <h5 class="modal-title">{{ title }}</h5>
+  <button type="button" class="close" aria-label="Close" (click)="dismiss()">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<div class="modal-body">
+  <form>
+    <div class="form-group">
+      <label for="recipient-name" class="form-control-label">Reason:</label>
+      <input type="text" class="form-control" name="comments" id="comments" [(ngModel)]="statusComments">
+    </div>
+  </form>
+</div>
+<div *ngIf="isCommentMissing" class="alert alert-danger">
+  <strong>Warning:</strong> Please enter a comment before changing the status.
+</div>
+<div class="modal-footer">
+  <button type="button" id="ModalDismiss" class="btn btn-default" data-dismiss="modal" (click)="decline()">{{ btnCancelText }}</button>
+  <button type="submit" id="SubmitStatusChange" class="btn btn-default btn-primary" (click)="accept()">{{ btnOkText }}</button>
+
+
+  <!--<button type="button" class="btn btn-danger" (click)="decline()">{{ btnCancelText }}</button>
+  <button type="button" class="btn btn-primary" (click)="accept()">{{ btnOkText }}</button> -->
+</div>

@@ -1,0 +1,85 @@
+  <div class="container w-100">
+    <div *ngIf="isLoggedIn">
+      <div class="row">
+        <div class="user-name col-auto ml-auto mr-auto">{{userName}}</div>
+      </div>
+      <div class="row mb-1">
+        <div class="col-auto ml-auto mr-auto">You are currently set as:</div>
+      </div>
+    </div>
+    <div *ngIf="!isLoggedIn">
+      <div class="row mb-1">
+        <div class="col-auto ml-auto mr-auto">You are not currently logged in</div>
+      </div>
+    </div>
+    <div *ngIf="isLoggedIn" class="status-label" [ngClass]="statusAreaClass">{{statusText}}
+      <span>
+        <dx-load-indicator #loadIndicator [visible]="isFetchingStatus"></dx-load-indicator>
+      </span>
+    </div>
+    <div *ngIf="isOnline && isLoggedIn">
+      <form>
+        <div class="form-row">
+          <div class="form-group col-12 col-md-6">
+            <label for="userArea" class="control-label">Area</label>
+          <select class="form-control alternate-dropdown-button" id="userArea"
+                   [(ngModel)]="userAreaString"
+                    name="userArea"
+                    #userArea="ngModel"
+                    (ngModelChange)="areaChanged($event)"
+                    [disabled]="isAreaDisabled">
+              <option *ngFor="let area of allAreas" [value]="area">{{area}}</option>
+            </select>
+          </div>
+          <div [formGroup]="myForm" class="form-group col-12 col-md-6">
+            <label for="userRoute" class="control-label">Routes (At the maximum, 3 routes can be selected)</label>
+            <ng-multiselect-dropdown [placeholder]="'Select Route'"
+                                     name="userRoutes"
+                                     formControlName="userRoutes"
+                                     [settings]="dropdownSettings"
+                                     [data]="allRoutes"
+                                     (onSelect)="onItemSelect($event)"
+                                     (onDeSelect)="onItemDeSelect($event)"
+                                     [disabled]="isRouteDisabled">
+            </ng-multiselect-dropdown>
+            <div *ngIf="isFetchingRoutes" class="route-spinner">
+              <dx-load-indicator #fetchRouteIndicator></dx-load-indicator>
+            </div>
+          </div>
+          </div>
+        <div class="form-row">
+          <div class="col"></div>
+          <div class="col-1"></div>
+          <div class="btn-group col" btnRadioGroup [(ngModel)]="inOutState" name="inOutGroup" [disabled]="!isOnline">
+            <label class="btn btn-outline-secondary"
+                  (click)="onCheckOut()" btnRadio="OUT">OUT</label>
+            <label class="btn btn-outline-success"
+                  (click)="onCheckIn()" btnRadio="IN">IN</label>
+          </div>
+          <div class="col-1">
+            <dx-load-indicator #saveIndicator [visible]="isSavingToDb"></dx-load-indicator>
+          </div>
+          <div class="col"></div>
+        </div>
+        <div class="form-row mt-1">
+          <div *ngIf="isStatusFetchFailed" class="col-12">
+            <alert type="warning">
+              <strong>Warning:</strong> Unable to retrieve existing checked in status.
+            </alert>
+          </div>
+          <div *ngIf="isStatusSaveFailed" class="col-12">
+            <alert type="danger">
+              <strong>Error:</strong> Unable to save status to the database.
+            </alert>
+          </div>
+          <div *ngIf="isAreaMessageVisible" class="col-12">
+            <alert type="danger">
+              <strong>Error:</strong> An Area needs to be selected.
+            </alert>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div *ngIf="!isOnline" class="offline-message">You are currently offline. You cannot save your checkin status.</div>
+  </div>
+

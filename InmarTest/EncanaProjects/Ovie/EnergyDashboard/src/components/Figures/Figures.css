@@ -1,0 +1,32 @@
+#EL-Figures .entity{
+  min-width: 300px;
+}
+#EL-Figures .count{
+  text-align: center;
+}
+#EL-Figures .sentiment{
+  text-align: center;
+}
+#EL-Figures .examples .-header{
+  display:none;
+}
+#EL-Figures .sentence{
+  padding:20px 20px 20px 30px;
+  min-width: 300px;
+  white-space: normal;
+  background-color: rgba(255, 255, 255, 1)
+}
+#EL-Figures .source{
+  padding:20px;
+  white-space: normal;
+}
+#EL-Figures .download{
+  float:right;
+  margin:-57px 10px 10px 10px;
+}
+#EL-Figures .fa-arrow-alt-circle-down{
+  font-size:20px;
+  position:relative;
+  top:1px;
+  left:-6px;
+}

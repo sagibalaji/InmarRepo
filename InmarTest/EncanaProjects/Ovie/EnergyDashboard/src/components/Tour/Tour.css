@@ -1,0 +1,173 @@
+.shepherd-element {
+    max-width: 600px!important;
+    font-size:19px;
+}
+.shepherd-header h3{
+    font-size:20px;
+    font-weight:500;
+    letter-spacing: 2px;
+    padding-left:10px;
+}
+.shepherd-text p, 
+.shepherd-text table, 
+.shepherd-text li{
+    font-size:17px;
+    line-height: 26px;
+}
+.shepherd-text a{
+    font-weight: bold;
+    text-decoration: underline;
+}
+#EL-Tour-Intro .container{
+    padding:20px;
+}
+#EL-Tour-Intro .header{
+    display:flex;
+    margin:30px 20px 20px 40px;
+}
+#EL-Tour-Intro .logo{
+    flex:1;
+}
+#EL-Tour-Intro .logo img{
+    width:150px;
+}
+#EL-Tour-Intro .intro{
+    flex:2;
+    font-size:24px;
+    line-height: 35px;
+    letter-spacing: 5px;
+}
+#EL-Tour-Intro .spacer{
+    padding-left:3px;
+}
+#EL-Tour-Header{
+    padding:30px;
+}
+#EL-Tour-Header table{
+    width:100%;
+    margin-bottom:30px;
+}
+#EL-Tour-Header th{
+    padding:10px;
+}
+#EL-Tour-Header td{
+    width:30px;
+    padding:10px 10px;
+    line-height: 24px;
+    vertical-align: top;
+}
+#EL-Tour-Refiners{
+    padding:30px;
+}
+.shepherd-spacer{
+    border:1pt solid red;
+}
+#EL-Tour-Refiners ul{
+    list-style-type: none;
+}
+#EL-Tour-Refiners li{
+    padding:10px 0px;
+}
+#EL-Tour-Results{
+    padding:30px;
+}
+#EL-Tour-Preview{
+    padding:30px;
+}
+#EL-Tour-Preview .container{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    padding:10px 30px 30px 30px;
+}
+#EL-Tour-Preview .yellow{
+    background: rgba(227, 204, 31, 0.3);
+}
+#EL-Tour-Frequency{
+    padding:30px;
+}
+#EL-Tour-Frequency .container{
+    padding:10px 50px;
+    text-align:center;
+    width:420px;
+    margin-bottom:20px;
+}
+#EL-Tour-Frequency table{
+    width:100%;
+    margin-bottom:20px;
+}
+#EL-Tour-Frequency th{
+    border-bottom:1pt solid black;
+    padding:10px;
+}
+#EL-Tour-Frequency td{
+    padding:10px;
+    font-weight:bold;
+}
+#EL-Tour-Sentiment{
+    padding:30px;
+}
+#EL-Tour-Sentiment table{
+    width:100%;
+    text-align:center;
+    margin-bottom:20px;
+}
+#EL-Tour-Sentiment td{
+    padding:10px;
+    font-weight:bold;
+}
+#EL-Tour-Sentiment .green,
+#EL-Tour-Trend .green {
+    color: rgba(35, 170, 128, 1);
+}
+#EL-Tour-Sentiment .red,
+#EL-Tour-Trend .red{
+    color: rgba(189, 71, 42,1);
+}
+#EL-Tour-Trend{
+    padding:30px;
+}
+#EL-Tour-Trend .container{
+    padding:10px 50px;
+    text-align:center;
+    width:480px;
+    margin-bottom:20px;
+}
+#EL-Tour-Themes{
+    padding:30px;
+}
+#EL-Tour-Themes .container{
+    text-align:center;
+    margin-bottom:20px;
+}
+#EL-Tour-Themes .container img{
+    width:500px;
+    border-bottom:1pt solid #E2E2E2;
+}
+#EL-Tour-Figures{
+    padding:30px;
+}
+#EL-Tour-Figures .container{
+    text-align:center;
+    margin-bottom:20px;
+}
+#EL-Tour-Figures .container img{
+    width:500px;
+    border:1pt solid #E2E2E2;
+}
+#EL-Tour-Outro{
+    padding:30px;
+}
+#EL-Tour-Outro .container{
+    display:flex;
+    margin-left:-15px;
+    margin-bottom:20px;
+}
+#EL-Tour-Outro .outro{
+    flex:2;
+}
+#EL-Tour-Outro .logo img{
+    width:160px;
+    margin-top:-5px;
+}
+#EL-Tour-Outro li{
+    margin-bottom:10px;
+}
