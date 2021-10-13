@@ -1,0 +1,10 @@
+{
+  "labels":[
+    "PRICE_DOWN",
+    "PRICE_UP"
+  ],
+  "pretrained_vectors":null,
+  "deprecation_fixes":{
+    "vectors_name":null
+  }
+}

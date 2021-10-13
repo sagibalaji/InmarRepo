@@ -1,0 +1,14 @@
+[Unit]
+Description=OVIE UPSERT
+After=network.target
+
+[Service]
+WorkingDirectory=/var/ovie/EnergyLandscape
+User=ovie
+Type=simple
+ExecStart=/bin/bash -c '. /opt/miniconda3/etc/profile.d/conda.sh; conda activate ovie; python upsert.py'
+Restart=on-failure
+RestartSec=5s
+
+[Install]
+WantedBy=multi-user.target

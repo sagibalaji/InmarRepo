@@ -1,0 +1,14 @@
+[Unit]
+Description=OVIE LEXIS
+After=network.target
+
+[Service]
+WorkingDirectory=/var/ovie/EnergyLandscape
+User=ovie
+Type=simple
+ExecStart=/bin/bash -c 'python lexis.py'
+Restart=on-failure
+RestartSec=5s
+
+[Install]
+WantedBy=multi-user.target

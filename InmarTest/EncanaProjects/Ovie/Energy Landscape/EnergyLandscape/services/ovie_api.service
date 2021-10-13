@@ -1,0 +1,14 @@
+[Unit]
+Description=OVIE API
+After=network.target
+
+[Service]
+WorkingDirectory=/var/ovie/EnergyLandscape
+User=ovie
+Type=simple
+ExecStart=/bin/bash -c '. /opt/miniconda3/etc/profile.d/conda.sh; conda activate ovie; uwsgi --socket 0.0.0.0:5000 --protocol=http -w wsgi:app --threads 10' 
+Restart=on-failure
+RestartSec=5s
+
+[Install]
+WantedBy=multi-user.target

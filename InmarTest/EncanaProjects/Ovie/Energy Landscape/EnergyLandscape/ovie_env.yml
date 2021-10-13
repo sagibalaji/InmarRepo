@@ -1,0 +1,20 @@
+# save file as ovie_env.yml
+# to install: conda env update --file ovie_env.yml
+name: ovie_test
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python
+  - pip
+  - flask
+  - spacy==2.2
+  - textacy
+  - flask_cors
+  - elasticsearch
+  - pandas
+  - pip:
+    - pip
+    - flask_restplus
+    - werkzeug==0.16.1
+    - vaderSentiment

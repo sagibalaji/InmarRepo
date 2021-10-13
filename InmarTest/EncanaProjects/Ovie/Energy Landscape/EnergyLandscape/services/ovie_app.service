@@ -1,0 +1,14 @@
+[Unit]
+Description=OVIE APP
+After=network.target
+
+[Service]
+WorkingDirectory=/var/ovie/EnergyDashboard
+User=ovie
+Type=simple
+ExecStart=/bin/bash -c 'serve build -l 4000'
+Restart=on-failure
+RestartSec=5s
+
+[Install]
+WantedBy=multi-user.target

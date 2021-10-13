@@ -1,0 +1,16 @@
+{"label": "PRICE_UP", "pattern": [{"lemma": "rise"}]}
+{"label": "PRICE_UP", "pattern": [{"lemma": "gain"}]}
+{"label": "PRICE_UP", "pattern": [{"lemma": "up"}]}
+{"label": "PRICE_UP", "pattern": [{"lemma": "jump"}]}
+{"label": "PRICE_UP", "pattern": [{"lemma": "surge"}]}
+{"label": "PRICE_UP", "pattern": [{"lemma": "edge"}]}
+{"label": "PRICE_UP", "pattern": [{"lemma": "claw back"}]}
+{"label": "PRICE_UP", "pattern": [{"lemma": "inch up"}]}
+{"label": "PRICE_DOWN", "pattern": [{"lemma": "slip"}]}
+{"label": "PRICE_DOWN", "pattern": [{"lemma": "retreat"}]}
+{"label": "PRICE_DOWN", "pattern": [{"lemma": "drop"}]}
+{"label": "PRICE_DOWN", "pattern": [{"lemma": "fall"}]}
+{"label": "PRICE_DOWN", "pattern": [{"lemma": "decline"}]}
+{"label": "PRICE_DOWN", "pattern": [{"lemma": "dip"}]}
+{"label": "PRICE_DOWN", "pattern": [{"lemma": "down"}]}
+{"label": "PRICE_DOWN", "pattern": [{"lemma": "losses"}]}
